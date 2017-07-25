@@ -15,7 +15,7 @@ int stringAsInt(const void *pLeft, const void *pRight) {
 }
 
 int main() {
-    int n;
+    int n,m;
     scanf("%d", &n);
     char buffer[1000000 + 1];
     char **a = malloc(sizeof(char*) * (size_t)n);
@@ -29,6 +29,7 @@ int main() {
         printf("%s\n", a[i]);
         free(a[i]);
     }
+    //free is requierd for stack
     free(a);
     return 0;
 }
